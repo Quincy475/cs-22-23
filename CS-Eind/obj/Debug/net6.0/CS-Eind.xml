@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CS-Eind</name>
+    </assembly>
+    <members>
+        <member name="M:CS_Eind.Controllers.LocationsController.GetLocation(System.Threading.CancellationToken)">
+            <summary>
+            Deze Method geeft alle locaties terug. Deze method heeft zowel een API v1 als v2 versie.
+            </summary>
+            <returns>Alle locaties met a.d.h.v. LocationDTO</returns>
+             <response code="200">Alle locaties met a.d.h.v. LocationDTO of LocationDTOv2</response>
+            <response code="404">Geen locaties gevonden die een image hebben voor Landlord of Location</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.LocationsController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Method om alle Locatie objecten op te halen.
+            </summary>
+            <returns>Returns alle locaties</returns>
+             <response code="200">Returns all locations</response>
+            <response code="404">No Locations found in DB</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.LocationsController.GetMaxPrice(System.Threading.CancellationToken)">
+            <summary>
+            Method om duurste locatieprijs te laten zien. 
+            </summary>
+            <returns>Duurste locatie prijs</returns>
+             <response code="200">Returns duurste locationsprijs </response>
+            <response code="404">No Locations found in DB</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.LocationsController.GetLocationDetails(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Method om specifieke locatie in detail te bekijken 
+            </summary>
+            <returns>details van een specifieke locatie</returns>
+             <response code="200">laat specifieke locatie ziens </response>
+            <response code="404">No Location with this Id found in DB</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.LocationsController.GetUnavailableDates(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Method om de onbeschikbare data te zien van een specifieke locatie 
+            </summary>
+            <returns>Lijst van alle unavailable dates</returns>
+             <response code="200">Returns unavailabe dates </response>
+            <response code="404">No Locations found in DB with this Id</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.LocationsController.Search(CS_Eind.Models.DTO.SearchDTO,System.Threading.CancellationToken)">
+            <summary>
+            Method om locaties te bekijken die gefilterd zijn naar wens. 
+            </summary>
+            <returns>Alle locaties die voldoen aan gestelde eisen</returns>
+             <response code="200">Returns locations with applied filters </response>
+            <response code="404">No Locations found in DB</response>
+        </member>
+        <member name="M:CS_Eind.Controllers.ReservationsController.MakeReservation(CS_Eind.Models.DTO.ResRequestDTO,System.Threading.CancellationToken)">
+            <summary>
+            Method om een nieuwe reservering te maken 
+            </summary>
+            <returns></returns>
+             <response code="200">Returns duurste locationsprijs </response>
+            <response code="404">No Locations found in DB</response>
+        </member>
+    </members>
+</doc>
